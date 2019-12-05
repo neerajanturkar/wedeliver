@@ -1,0 +1,14 @@
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    font-size: 300%;
+    /* font-style: oblique; */
+
+}
+mat-toolbar.mat-toolbar {
+   
+    background-color: #01579b;
+    color: azure;
+}
+

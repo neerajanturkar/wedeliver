@@ -1,0 +1,55 @@
+#map {
+    height: 90%;
+    width:60%;
+  }
+  .column {
+    float: left;
+    width: 500%;
+      
+  }
+  .column1 {
+    float: left;
+    width: 60%;
+    height: 700px; 
+  }
+  .column2 {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    height: 700px; 
+  }
+  .label-blue {
+      color: #0288D1;
+      font-size: 200%;
+      padding-left: 10px;
+  }
+  .label-blue-small {
+    color: #0288D1;
+    font-size: 150%;
+}
+  .address-input {
+      width: 500px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 30px;
+      font-size: 100%;
+      margin-left: 10px;
+  }
+  .datetime-input {
+    width: 225px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 30px;
+    font-size: 100%;
+    margin-left: 10px;
+}
+  .proceed-btn {
+      width: 120%;
+      height: 60px;
+      color:azure;
+      font-size: 200%; 
+      font-family: "Sans Serif";
+      margin-bottom: 10px;
+      background: #03A9F4;
+      margin-left: 10px;
+  }

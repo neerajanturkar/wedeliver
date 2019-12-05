@@ -1,0 +1,87 @@
+<app-header></app-header>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"/>
+<style>
+  
+</style>
+</head>
+<body>
+   
+      <div class="row">
+        <div #gmap class="column1"></div>
+
+            <div class="column2">
+              <br>
+              <br>
+              <label class="label-blue">From</label>
+              <br>
+              <input class="address-input" [(ngModel)]="from" (change)="fromChanged();" type="text"/>
+              <br>
+              <label class="label-blue">To</label>
+              <br>
+              <input class="address-input" [(ngModel)]="to" (change)="toChanged();" type="text"/>
+              <br>
+              <div class="row">
+                <div class="column" style="margin-top:60px">
+                  <label class="label-blue">Pickup By</label>
+                  <label class="label-blue" style="margin-left: 110px;">Drop By </label>
+                </div>
+                <div class="column">
+                    <input class="datetime-input" type="text"/>
+                    <input class="datetime-input" style="margin-left: 45px;" type="text"/>
+                </div>
+              </div>
+              <br>
+             <button class="proceed-btn" style="margin-top:10px">Proceed</button>
+            </div>
+        
+        
+      </div>
+
+     
+<script>
+  // var map;
+  // function initMap() {
+  //   map = new google.maps.Map(document.getElementById('map'), {
+  //     center: {lat: 49.41369, lng: 8.6508},
+  //     zoom: 15
+  //   });
+  //   var myLatlng = new google.maps.LatLng(49.41369, 8.6508);
+  //   var marker = new google.maps.Marker({
+  //   draggable: true,
+  //   position: myLatlng, 
+  //   map: map,
+  //   title: "Your location",
+  //   label: "A"
+  //   });
+  //   google.maps.event.addListener(marker, 'click', function (event) {
+  //       document.getElementById("latbox").value = event.latLng.lat();
+  //       document.getElementById("lngbox").value = event.latLng.lng();
+  //   });
+
+  //   google.maps.event.addListener(marker, 'click', function (event) {
+  //       document.getElementById("latbox").value = this.getPosition().lat();
+  //       document.getElementById("lngbox").value = this.getPosition().lng();
+  //   });
+
+  //   google.maps.event.addListener(marker, 'dragend', function (event) {
+  //   document.getElementById("latbox").value = this.getPosition().lat();
+  //   document.getElementById("lngbox").value = this.getPosition().lng();
+  //   });
+  //   google.maps.event.addListener(map, 'click', function(event) {
+  //   placeMarker(event.latLng);
+  //   });
+
+  //   function placeMarker(location) {
+  //       var marker = new google.maps.Marker({
+  //           position: location, 
+  //           map: map
+  //       });
+  //   }
+  // }
+
+</script>
+
+
+
+</body>
