@@ -1,8 +1,9 @@
 /// <reference types="@types/googlemaps" />
 
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit,ViewChild, Input , NgZone} from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { MapService } from '../map.service';
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -10,14 +11,23 @@ import { MapService } from '../map.service';
 })
 export class MapComponent implements OnInit {
   @ViewChild('gmap') gmapElement: any;
+  @Input() label: string;
+  @Input() value: string;
+
   map: google.maps.Map;
   from: any;
   to: any;
   bounds: any;
   marker_a: any;
   marker_b: any;
-  constructor(private httpClient: HttpClient, private mapService: MapService) { 
+  distance: any;
+  source_lat: any;
+  source_lng: any;
+  dest_lat: any;
+  dest_lng: any;
+  constructor(private httpClient: HttpClient, private mapService: MapService, private ngZone: NgZone) { 
     this.bounds = new google.maps.LatLngBounds();
+    
   }
 
   ngOnInit() {
@@ -33,7 +43,12 @@ export class MapComponent implements OnInit {
         this.marker_a.setMap(null);
     this.mapService.getGeoCodingFromAddress(this.from).then(response=> {
         this.from = response.body['results'][0]['formatted_address'];
-        this.addMarker(response.body['results'][0]['geometry']['location']['lat'], response.body['results'][0]['geometry']['location']['lng'],'A',this.marker_a);
+        this.source_lat = response.body['results'][0]['geometry']['location']['lat'];
+        this.source_lng = response.body['results'][0]['geometry']['location']['lng'];
+        this.addMarker(this.source_lat, this.source_lng,'A',this.marker_a);
+        if(this.from!==undefined && this.to!=undefined){
+            this.calculateDistance();
+        }
       }
     );
     
@@ -43,11 +58,15 @@ export class MapComponent implements OnInit {
   toChanged(){
     if(this.marker_b!==undefined)
       this.marker_b.setMap(null);
-    this.mapService.getGeoCodingFromAddress(this.to).then(response=> {
-      
+    this.mapService.getGeoCodingFromAddress(this.to).then(response=> {  
       this.to = response.body['results'][0]['formatted_address'];
-      this.addMarker(response.body['results'][0]['geometry']['location']['lat'], response.body['results'][0]['geometry']['location']['lng'],'B',this.marker_b);
-
+      this.dest_lat = response.body['results'][0]['geometry']['location']['lat'];
+      this.dest_lng = response.body['results'][0]['geometry']['location']['lng'];
+      this.addMarker(this.dest_lat, this.dest_lng,'B',this.marker_b);
+      if(this.from!==undefined && this.to!=undefined){
+        this.distance =  this.calculateDistance();
+        
+      }
     }
   );
   }
@@ -70,4 +89,24 @@ export class MapComponent implements OnInit {
     this.map.fitBounds(this.bounds);
     
   }
+   calculateDistance(){
+    let source_latlng = new google.maps.LatLng(this.source_lat, this.source_lng);
+    let destination_latlng = new google.maps.LatLng(this.dest_lat, this.dest_lng);
+    let distance;
+    if(this.from!==undefined && this.to!=undefined){
+      const matrix = new google.maps.DistanceMatrixService();
+      matrix.getDistanceMatrix({
+        origins: [source_latlng],
+        destinations: [destination_latlng],
+        travelMode: google.maps.TravelMode.DRIVING,
+      }, 
+      (response, status ) => this.ngZone.run(() => {
+        
+        this.distance = response.rows[0].elements[0].distance.text;
+     
+    }));
+    
+  }
+  
+}
 }

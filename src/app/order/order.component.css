@@ -19,6 +19,8 @@
   h1{
       color: #01579b;
       font-family: 'Hind', sans-serif;
+      margin-left: 30px;
+      margin-top: 50px;
   }
 
   .bill-lbl{
@@ -34,3 +36,7 @@
     float: right;
     margin-right: 50px;
   }
+  .insurance-chk{
+      color: #01579b;
+  }
+

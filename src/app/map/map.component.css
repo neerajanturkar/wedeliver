@@ -1,6 +1,8 @@
+
 #map {
-    height: 90%;
+    height: 200%;
     width:60%;
+   
   }
   .column {
     float: left;
@@ -10,7 +12,7 @@
   .column1 {
     float: left;
     width: 60%;
-    height: 700px; 
+    height: 780px; 
   }
   .column2 {
     float: left;
@@ -19,13 +21,15 @@
     height: 700px; 
   }
   .label-blue {
-      color: #0288D1;
-      font-size: 200%;
+      color:  #01579b;
+      font-size: 170%;
       padding-left: 10px;
+      font-family: 'Hind', sans-serif;
   }
   .label-blue-small {
     color: #0288D1;
     font-size: 150%;
+    font-family: 'Hind', sans-serif;
 }
   .address-input {
       width: 500px;
@@ -44,12 +48,34 @@
     margin-left: 10px;
 }
   .proceed-btn {
-      width: 120%;
+      width: 125%;
       height: 60px;
       color:azure;
       font-size: 200%; 
-      font-family: "Sans Serif";
+      font-family: 'Hind', sans-serif;
       margin-bottom: 10px;
-      background: #03A9F4;
+      background: #01579b;
       margin-left: 10px;
+      
+  }
+  .proceed-btn:hover{
+    background: #0288D1;
+  }
+  .distance {
+    font-family: 'Hind', sans-serif;
+    font-size: 170%;
+    color: grey;
+  }
+.datepicker{
+    height: 30px;
+    font-size: 100%;
+    width: 300px;
+    max-width: max-content;
+    padding-top: 15px;
+    margin-right: -175px;
+    float: right;
+
+}
+mat-form-field {
+  width: 50%;
   }

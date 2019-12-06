@@ -20,4 +20,20 @@ export class MapService {
     .toPromise();
     
    }
+   getDistanceFromAtoB(a: any, b: any): Promise<any> {
+
+    return this.httpClient.get('https://maps.googleapis.com/maps/api/distancematrix/json?',{
+      params: {
+        origins: a,
+        destinations: b,
+        key: 'AIzaSyCE7AEAxPPD3TuW-pwG14QZdxHdIdAG8ek'
+      },
+      headers: {
+        content:'application/json'
+      },
+      observe: 'response'
+    })
+    .toPromise();
+
+   }
 }

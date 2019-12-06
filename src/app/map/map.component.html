@@ -1,6 +1,6 @@
 <app-header></app-header>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet"/>
 <style>
   
 </style>
@@ -21,15 +21,28 @@
               <br>
               <input class="address-input" [(ngModel)]="to" (change)="toChanged();" type="text"/>
               <br>
+              <label *ngIf="distance!=0" class="label-blue">Approximate Distance : </label>
+              
+              
+              <label class="distance">{{ distance }}</label>
+              <br>
               <div class="row">
                 <div class="column" style="margin-top:60px">
-                  <label class="label-blue">Pickup By</label>
-                  <label class="label-blue" style="margin-left: 110px;">Drop By </label>
+                  <label class="label-blue" style="margin-left: 15px;">Pickup By</label>
+                 
+            
+                  <mat-form-field>
+                      <input  matInput type="datetime-local" [(ngModel)]="pick_date" class="datepicker" style="margin-right: -156px;">
+                    </mat-form-field>
+                    <br>
+                   
+                    <br>
+                    <label class="label-blue" style="padding-left: 24px;">Drop By</label>
+                    <mat-form-field>
+                        <input matInput type="datetime-local" [(ngModel)]="drop_date" class="datepicker">
+                      </mat-form-field>
                 </div>
-                <div class="column">
-                    <input class="datetime-input" type="text"/>
-                    <input class="datetime-input" style="margin-left: 45px;" type="text"/>
-                </div>
+               
               </div>
               <br>
              <button class="proceed-btn" style="margin-top:10px">Proceed</button>

@@ -1,15 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatInputModule , MatIconModule , MatCardModule , MatCheckboxModule } from '@angular/material';
+import { MatToolbarModule, MatInputModule , MatIconModule , MatCardModule , MatCheckboxModule ,MatFormFieldModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms'
+import { FormsModule,  } from '@angular/forms'
 import { MapService } from './map.service';
 import { OrderComponent } from './order/order.component';
+import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 // import {MatCheckboxModule} from '@angular/material/checkbox';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { OrderComponent } from './order/order.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule
   ],
   providers: [MapService],
   bootstrap: [AppComponent]
