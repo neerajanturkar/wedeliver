@@ -108,3 +108,48 @@
 .proceed-btn:hover{
   background: #0288D1;
 }
+::ng-deep .mat-accent .mat-slider-thumb {
+    background-color: #01579b;
+    color: grey;
+    transform: scale(0) !important;
+    height: 30px;
+  width: 30px;
+} 
+::ng-deep .mat-accent .mat-slider-thumb-label {
+    background-color: #01579b;
+   color: azure !important;
+   transform: rotate(45deg) !important;
+  border-radius: 50% 50% 0 !important;
+
+} 
+::ng-deep .mat-accent .mat-slider-thumb-label-text {
+    color: azure !important;
+    opacity: 1 !important;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+    background-color: #01579b;
+    color: grey
+} 
+::ng-deep .mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb{
+    background-color: #01579b;
+}
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar{
+    background-color: #01579b;
+}
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: lightgrey;
+}
+
+::ng-deep .mat-button-toggle-group{
+    height: fit-content;
+    margin-left: 16%;
+    margin-top: 5%;
+}
+::ng-deep .mat-button-toggle .mat-button-toggle-checked{
+    background-color: #01579b;
+    color: azure;
+}
+.mat-button-toggle-checked {
+    background-color: #01579b;
+    color: azure;
+}

@@ -12,5 +12,11 @@ export class OrderComponent implements OnInit {
 
   ngOnInit() {
   }
+  formatLabel(value: any) {
+    if (value <= 10) {
+      return value + 'kg';
+    }
+    return value;
+  }
 
 }

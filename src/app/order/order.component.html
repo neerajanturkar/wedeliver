@@ -10,6 +10,64 @@
     <div class="row">
       <div class="column1">
       <h1 style="margin-left:25px;">We would like to know more about your package.</h1>
+      <div class="row">
+        
+          <label style="margin-left: 10%;
+          margin-top: 5%;
+          font-size: 140%;">Weight of your package ? </label>
+            <mat-slider
+            style="    margin-top: 4.5%;
+            width: 25%;
+            margin-left: 10%;"
+            
+            [displayWith]="formatLabel"
+            max="10"
+            min="1"
+            step="1"
+            thumbLabel="true"
+            tickInterval="auto"
+            
+            >
+        </mat-slider>
+       
+        
+      </div>
+      <div class="row">
+          <label style="margin-left: 10%;
+          margin-top: 5%;
+          font-size: 140%;">Is it Fragile ? </label>
+         <mat-slide-toggle
+         style="margin-top: 5.5%;
+         margin-left: 23%;"
+         
+         [checked]="true"
+         >
+       Yes
+     </mat-slide-toggle>
+      </div>
+      <div class="row">
+          <label style="margin-left: 10%;
+          margin-top: 5%;
+          font-size: 140%;">How valuable it is ? </label>
+          <mat-button-toggle-group name="valuable" aria-label="Font Style">
+              <mat-button-toggle value="high">High</mat-button-toggle>
+              <mat-button-toggle value="medium">Medium</mat-button-toggle>
+              <mat-button-toggle value="low">Low</mat-button-toggle>
+            </mat-button-toggle-group>
+       
+      </div>
+
+      <div class="row">
+          <label style="margin-left: 10%;
+          margin-top: 5%;
+          font-size: 140%;">Timming Constraint  </label>
+           <mat-button-toggle-group name="time" aria-label="Font Style" style="    margin-left: 15%;">
+              <mat-button-toggle value="high">High</mat-button-toggle>
+              <mat-button-toggle value="medium">Medium</mat-button-toggle>
+              <mat-button-toggle value="low">Low</mat-button-toggle>
+            </mat-button-toggle-group>
+       
+      </div>
       </div>
       <div class="column2" style="margin-top: 70px;margin-left: 50px;">
         <h1 style="margin-top:100px;margin-left:127px;margin-bottom: 50px;">Expense</h1>
