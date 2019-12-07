@@ -1,0 +1,93 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wd-image {
+  /* The image used */ /* 
+  background-image: url("./WeDelivery.jpeg"); */
+  background-image: url("../../assets/image/WeDelivery.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sub-color {
+  background-color: #ec5a52;
+  color: #fff;
+  border-radius: 2.25rem;
+  padding: 0.5rem 3rem;
+}
+
+.placeholder {
+  border-radius: 2.25rem;
+}
+
+.special-card {
+  /* create a custom class so you 
+       do not run into specificity issues 
+       against bootstraps styles
+       which tends to work better than using !important 
+       (future you will thank you later)*/
+
+  background-color: #6c757d;
+  opacity: 0.9;
+  min-width: 35vw;
+  max-width: 25em;
+  min-height: 35vh;
+  max-height: 25em;
+}
+
+.sign_up_cards {
+  margin-top: 5%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+  margin-left: 60%;
+}
+
+.para {
+  position: absolute;
+  margin-top: 10%;
+  margin-right: 55%;
+  margin-left: 10%;
+  font-family: "Solway", serif;
+  font-size: 20px;
+}
+
+.h1-style {
+  font-family: "Solway", serif, cursive;
+  font-size: 60px;
+  color: #b5423b;
+  margin-top: 3%;
+  margin-left: 65%;
+}
+
+.text-center {
+  font-family: "Solway", serif;
+  color: #551028;
+}
+
+.modal-content1 {
+  /* position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column; */
+  flex-direction: column;
+  /* width: 100%; */
+  /* pointer-events: auto; */
+  background-color: #fff;
+  /* background-clip: padding-box; */
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 2;
+}
+.link-color {
+  color: #003bff;
+  text-align: center;
+}
