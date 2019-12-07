@@ -1,8 +1,10 @@
 /// <reference types="@types/googlemaps" />
 
 import { Component, OnInit,ViewChild, Input , NgZone} from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
 import { MapService } from '../map.service';
+import { LoadingService } from "../loading.service";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-map',
@@ -25,7 +27,12 @@ export class MapComponent implements OnInit {
   source_lng: any;
   dest_lat: any;
   dest_lng: any;
-  constructor(private httpClient: HttpClient, private mapService: MapService, private ngZone: NgZone) { 
+  constructor(private httpClient: HttpClient, 
+              private mapService: MapService, 
+              private ngZone: NgZone,  
+              private loadingService: LoadingService,
+              private route: ActivatedRoute,
+              private router: Router ) { 
     this.bounds = new google.maps.LatLngBounds();
     
   }
@@ -109,4 +116,8 @@ export class MapComponent implements OnInit {
   }
   
 }
+  submitRequest(){
+    // this.loadingService.showLoader();
+    this.router.navigate(["/order"]);
+  }
 }

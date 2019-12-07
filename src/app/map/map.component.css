@@ -79,3 +79,10 @@
 mat-form-field {
   width: 50%;
   }
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 1.25em;
+    padding-left: 7em;
+}
+::ng-deep .mat-form-field-underline ng-tns-c3-1 ng-star-inserted{
+  color: #01579b;
+}
