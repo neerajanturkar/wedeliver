@@ -12,6 +12,8 @@ import { OrderComponent } from './order/order.component';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 // import {MatCheckboxModule} from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SuccessComponent } from './success/success.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     MapComponent,
     HeaderComponent,
-    OrderComponent
+    OrderComponent,
+    SuccessComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
