@@ -1,6 +1,6 @@
 .column1 {
     float: left;
-    width: 60%;
+    width: 65%;
     height: 700px; 
    
   }
@@ -28,6 +28,9 @@
     font-family: 'Hind', sans-serif;
     font-size: 20px;
     margin-left: 25%;
+    float: left;
+ 
+
   }
   .bill-lbl-value{
     color: gray;
@@ -38,5 +41,70 @@
   }
   .insurance-chk{
       color: #01579b;
+      margin-left: 95px;
+      margin-right: -25px;
+      float: left;
+      color: gray;
+    font-family: 'Hind', sans-serif;
+    font-size: 20px;
+
+  }
+  .mat-checkbox-input cdk-visually-hidden{
+      display: none;
+  }
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  .mat-slide-toggle-input .cdk-visually-hidden{
+    display: none;
+  }
+  .strikethrough{
+    color: gray;
+    font-family: 'Hind', sans-serif;
+    font-size: 20px;
+    margin-left: 25%;
+    float: left;
+  }
+  .strikethrough-value{
+    color: gray;
+    font-family: 'Hind', sans-serif;
+    font-size: 20px;
+    float: right;
+    margin-right: 50px;
+  }
+  .chk:not(:checked) + .strikethrough{ 
+    text-decoration: line-through;
   }
 
+  .chk:not(:checked) + .strikethrough-value{
+    text-decoration: line-through;
+  }
+  hr
+  {
+  border:solid 1px black;
+  width: 85%;
+  color: #FFFF00;
+
+  margin-bottom: 2rem;
+  }
+
+  .proceed-btn {
+    width: 80%;
+    height: 60px;
+    color:azure;
+    font-size: 200%; 
+    font-family: 'Hind', sans-serif;
+
+    background: #01579b;
+   
+    margin-top: 60px;
+    margin-left: 35px;
+
+    
+}
+.proceed-btn:hover{
+  background: #0288D1;
+}

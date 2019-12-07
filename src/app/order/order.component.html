@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [show_logout]=true></app-header>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
 <style>
@@ -9,22 +9,22 @@
    
     <div class="row">
       <div class="column1">
-      <h1 style="margin-left:15px;">We would like to know more about your package.</h1>
+      <h1 style="margin-left:25px;">We would like to know more about your package.</h1>
       </div>
       <div class="column2" style="margin-top: 70px;margin-left: 50px;">
-        <h1 style="margin-top:100px;margin-left:100px;">Total Expense</h1>
+        <h1 style="margin-top:100px;margin-left:127px;margin-bottom: 50px;">Expense</h1>
         <div class="row">
             <div class="column" style="margin-left:70px">
           <label class="bill-lbl">Distance</label>
           </div>
           <div class="column">
               <label class="bill-lbl-value" >100</label>
-              <label class="bill-lbl" style="float: right;margin-top: -31px;margin-right: 35px;" >€</label>
+              <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
               
           </div>
         </div>
        
-        <br>
+       
         <br>
         <div class="row">
             <div class="column" style="margin-left:70px">
@@ -33,29 +33,41 @@
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
               <label class="bill-lbl-value">1000</label>
-              <label class="bill-lbl" style="float: right;margin-top: -31px;margin-right: 35px;" >€</label>
+              <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
           </div>
         </div>
         
+       
         <br>
-        <br>
+        
         <div class="row">
             <div class="column" style="margin-left:70px">
-             
-              <!-- <input type="checkbox" [ngModel]="myModel" class="insurance-chk"/> -->
-              <mat-form-field>
-              <mat-checkbox class="insurance-chk" [ngModel]="myModel">Insurance</mat-checkbox>
-              </mat-form-field>
-              <!-- <label class="bill-lbl">Insurance</label> -->
+              <input type="checkbox" [(ngModel)]="myModel" style="margin-left: -100px;" class="chk"/>
+              <label class="strikethrough">Insurance</label>
+            <!-- </div> -->
           </div>
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
-              <label class="bill-lbl-value">1000</label>
-              <label class="bill-lbl" style="float: right;margin-top: -31px;margin-right: 35px;" >€</label>
+              <label class="strikethrough" [style.text-decoration]="myModel ? '': 'line-through' ">1000</label>
+              <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
+          </div>
+          
+        </div>
+        
+       
+        <br>
+        <hr style="width: 285px;margin-right: 100px;">
+        <div class="row">
+            <div class="column" style="margin-left:70px">
+          <label class="bill-lbl" style="color:#01579b"><strong>Total</strong></label>
+          </div>
+          <div class="column">
+              <label class="bill-lbl-value" style="color:#01579b"><strong>100</strong></label>
+              <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;color:#01579b" >€</label>
+              
           </div>
         </div>
-
-      
+        <button class="proceed-btn" style="margin-top:10px">Proceed</button>
       </div>
       </div>
       </body>

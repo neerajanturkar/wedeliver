@@ -11,4 +11,8 @@ mat-toolbar.mat-toolbar {
     background-color: #01579b;
     color: azure;
 }
-
+.logout {
+    background: #01579b;
+    border: none;
+    color: azure;
+}

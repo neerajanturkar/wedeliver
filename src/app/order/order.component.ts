@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
   myModel = true;
+  show_logout = false;
   constructor() { }
 
   ngOnInit() {

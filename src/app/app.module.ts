@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatInputModule , MatIconModule , MatCardModule , MatCheckboxModule ,MatFormFieldModule} from '@angular/material';
+import { MatToolbarModule, MatInputModule , MatIconModule , MatDividerModule, MatCardModule , MatSlideToggleModule, MatCheckboxModule ,MatFormFieldModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCheckboxModule,
     MatInputModule,
     MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatDividerModule
   ],
   providers: [MapService],
   bootstrap: [AppComponent]
