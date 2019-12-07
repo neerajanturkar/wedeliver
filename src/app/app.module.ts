@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatInputModule , MatIconModule, MatProgressSpinnerModule , MatButtonToggleModule, MatDividerModule, MatCardModule , MatSlideToggleModule, MatCheckboxModule ,MatFormFieldModule, MatSliderModule} from '@angular/material';
+import { MatToolbarModule, MatInputModule , MatSnackBarModule, MatIconModule, MatProgressSpinnerModule , MatButtonToggleModule, MatDividerModule, MatCardModule , MatSlideToggleModule, MatCheckboxModule ,MatFormFieldModule, MatSliderModule} from '@angular/material';
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './header/header.component';
@@ -34,7 +34,8 @@ import { LoadingService } from "./loading.service";
     MatDividerModule,
     MatSliderModule,
     MatButtonToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   providers: [MapService, LoadingService],
   bootstrap: [AppComponent]

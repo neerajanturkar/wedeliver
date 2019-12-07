@@ -1,7 +1,7 @@
 <div class="custom-loading-container">
   <mat-spinner></mat-spinner>
 </div>
-<app-header></app-header>
+<app-header [show_logout]='true'></app-header>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet"/>
 <style>
@@ -35,14 +35,14 @@
                  
             
                   <mat-form-field>
-                      <input  matInput type="datetime-local" [(ngModel)]="pick_date" class="datepicker" >
+                      <input  matInput type="datetime-local" [(ngModel)]="pickup_datetime" class="datepicker" >
                     </mat-form-field>
                     <br>
                    
                     <br>
                     <label class="label-blue" style="padding-left: 24px;margin-right: 5%">Drop By</label>
                     <mat-form-field>
-                        <input matInput type="datetime-local" [(ngModel)]="drop_date" class="datepicker">
+                        <input matInput type="datetime-local" [(ngModel)]="drop_datetime" class="datepicker">
                       </mat-form-field>
                 </div>
                
@@ -56,46 +56,7 @@
 
      
 <script>
-  // var map;
-  // function initMap() {
-  //   map = new google.maps.Map(document.getElementById('map'), {
-  //     center: {lat: 49.41369, lng: 8.6508},
-  //     zoom: 15
-  //   });
-  //   var myLatlng = new google.maps.LatLng(49.41369, 8.6508);
-  //   var marker = new google.maps.Marker({
-  //   draggable: true,
-  //   position: myLatlng, 
-  //   map: map,
-  //   title: "Your location",
-  //   label: "A"
-  //   });
-  //   google.maps.event.addListener(marker, 'click', function (event) {
-  //       document.getElementById("latbox").value = event.latLng.lat();
-  //       document.getElementById("lngbox").value = event.latLng.lng();
-  //   });
-
-  //   google.maps.event.addListener(marker, 'click', function (event) {
-  //       document.getElementById("latbox").value = this.getPosition().lat();
-  //       document.getElementById("lngbox").value = this.getPosition().lng();
-  //   });
-
-  //   google.maps.event.addListener(marker, 'dragend', function (event) {
-  //   document.getElementById("latbox").value = this.getPosition().lat();
-  //   document.getElementById("lngbox").value = this.getPosition().lng();
-  //   });
-  //   google.maps.event.addListener(map, 'click', function(event) {
-  //   placeMarker(event.latLng);
-  //   });
-
-  //   function placeMarker(location) {
-  //       var marker = new google.maps.Marker({
-  //           position: location, 
-  //           map: map
-  //       });
-  //   }
-  // }
-
+  
 </script>
 
 

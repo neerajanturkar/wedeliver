@@ -5,6 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import { MapService } from '../map.service';
 import { LoadingService } from "../loading.service";
 import { Router, ActivatedRoute } from "@angular/router";
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-map',
@@ -19,6 +20,9 @@ export class MapComponent implements OnInit {
   map: google.maps.Map;
   from: any;
   to: any;
+  pickup_datetime: any;
+  drop_datetime: any;
+
   bounds: any;
   marker_a: any;
   marker_b: any;
@@ -32,7 +36,8 @@ export class MapComponent implements OnInit {
               private ngZone: NgZone,  
               private loadingService: LoadingService,
               private route: ActivatedRoute,
-              private router: Router ) { 
+              private router: Router,
+              private snackBar: MatSnackBar, ) { 
     this.bounds = new google.maps.LatLngBounds();
     
   }
@@ -72,7 +77,7 @@ export class MapComponent implements OnInit {
       this.addMarker(this.dest_lat, this.dest_lng,'B',this.marker_b);
       if(this.from!==undefined && this.to!=undefined){
         this.distance =  this.calculateDistance();
-        
+        localStorage.setItem("distance",this.distance);
       }
     }
   );
@@ -117,7 +122,55 @@ export class MapComponent implements OnInit {
   
 }
   submitRequest(){
-    // this.loadingService.showLoader();
-    this.router.navigate(["/order"]);
+    
+    this.snackBar.open("Looking for carriers", null, {
+      duration: 2000,
+    });
+    if(this.validate()){
+      this.loadingService.showLoader();
+      this.delay(2000).then(response =>{
+        this.loadingService.hideLoader();
+        this.router.navigate(["/order"]);
+      });
+    }
+   
+  }
+    delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
+  validate(){
+    return true;
+    if(this.from===undefined){
+      this.snackBar.open("Missing pickup location", null, {
+        duration: 2000,
+      });
+      return false;
+    }
+    if(this.to===undefined){
+      this.snackBar.open("Missing drop location", null, {
+        duration: 2000,
+      });
+      return false;
+    }
+    if(this.pickup_datetime===undefined){
+      this.snackBar.open("Missing pickup datetime", null, {
+        duration: 2000,
+      });
+      return false;
+    }
+    if(this.drop_datetime===undefined){
+      this.snackBar.open("Missing drop datetime", null, {
+        duration: 2000,
+      });
+      return false;
+    }
+    if(this.distance===undefined){
+      this.snackBar.open("Cannot determine the distance", null, {
+        duration: 2000,
+      });
+      return false;
+    }
+    return true;
   }
 }
