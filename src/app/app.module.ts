@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatInputModule , MatSnackBarModule, MatIconModule, MatProgressSpinnerModule , MatButtonToggleModule, MatDividerModule, MatCardModule , MatSlideToggleModule, MatCheckboxModule ,MatFormFieldModule, MatSliderModule} from '@angular/material';
-import { AppComponent } from './app.component';
-=======
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import {
@@ -17,11 +11,10 @@ import {
   MatSlideToggleModule,
   MatCheckboxModule,
   MatFormFieldModule,
-  MatSliderModule
+  MatSliderModule,
+  MatSnackBarModule
 } from "@angular/material";
 import { AppComponent } from "./app.component";
->>>>>>> e0fb4b01bf10cd7060b59c5098ec1ea345c7a818
-
 import { HeaderComponent } from "./header/header.component";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule, routingComponents } from "./app-routing.module";
