@@ -12,7 +12,8 @@ import {
   MatCheckboxModule,
   MatFormFieldModule,
   MatSliderModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDialogModule
 } from "@angular/material";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
@@ -57,7 +58,8 @@ import { SignupComponent } from './signup/signup.component';
     MatSliderModule,
     MatButtonToggleModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [MapService, LoadingService],
   bootstrap: [AppComponent]

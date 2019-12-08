@@ -1,3 +1,6 @@
+<div class="custom-loading-container">
+    <mat-spinner></mat-spinner>
+  </div>
 <app-header [show_logout]=true></app-header>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
@@ -19,8 +22,9 @@
             style="    margin-top: 4.5%;
             width: 25%;
             margin-left: 10%;"
-            
+            (change)="onWeightChange();"
             [displayWith]="formatLabel"
+            [(ngModel)]="weight_value"
             max="10"
             min="1"
             step="1"
@@ -90,7 +94,7 @@
           </div>
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
-              <label class="bill-lbl-value">10</label>
+              <label class="bill-lbl-value">{{weight_amount}}</label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
           </div>
         </div>
@@ -100,13 +104,13 @@
         
         <div class="row">
             <div class="column" style="margin-left:70px">
-              <input type="checkbox" [(ngModel)]="myModel" style="margin-left: -100px;" class="chk"/>
+              <input type="checkbox" (change)="onInsuranceClick();" [(ngModel)]="includeInsurance" style="margin-left: -100px;" class="chk"/>
               <label class="strikethrough">Insurance</label>
             <!-- </div> -->
           </div>
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
-              <label class="strikethrough" style="float: right;margin-right: 50px" [style.text-decoration]="myModel ? '': 'line-through' ">{{insurance}}</label>
+              <label class="strikethrough" style="float: right;margin-right: 50px" [style.text-decoration]="includeInsurance ? '': 'line-through' ">{{insurance}}</label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
           </div>
           
@@ -120,12 +124,12 @@
           <label class="bill-lbl" style="color:#01579b"><strong>Total</strong></label>
           </div>
           <div class="column">
-              <label class="bill-lbl-value" style="color:#01579b"><strong>100</strong></label>
+              <label class="bill-lbl-value" style="color:#01579b"><strong>{{total}}</strong></label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;color:#01579b" >€</label>
               
           </div>
         </div>
-        <button class="proceed-btn" style="margin-top:10px">Proceed</button>
+        <button class="proceed-btn" style="margin-top:10px" (click)="submitRequest()">Proceed</button>
       </div>
       </div>
       </body>

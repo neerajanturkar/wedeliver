@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSlideToggleChange , MatSlideToggle} from '@angular/material';
 import { MatSnackBar } from '@angular/material';
+import { LoadingService } from "../loading.service";
+import { Router, ActivatedRoute } from "@angular/router";
+
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -15,8 +18,13 @@ export class OrderComponent implements OnInit {
   insurance = 0;
   distance: any;
   distance_value = 0;
-  this
-  constructor( private snackBar: MatSnackBar ) { }
+  weight_value: any;
+  weight_amount: any;
+  total: any;
+  includeInsurance= true;
+  constructor( private snackBar: MatSnackBar,
+               private loadingService: LoadingService,private router: Router,
+               ) { }
 
   ngOnInit() {
     this.distance = localStorage.getItem('distance');
@@ -24,7 +32,8 @@ export class OrderComponent implements OnInit {
     console.log(this.distance);
     this.distance_value = 1.5 * this.distance[0];
     this.distance_value = Math.round(this.distance_value);
-
+    this.weight_amount = 3;
+    this.total = this.distance_value + this.weight_amount;
   }
   formatLabel(value: any) {
     if (value <= 10) {
@@ -62,7 +71,37 @@ export class OrderComponent implements OnInit {
         this.snackBar.open(msg, null, {
           duration: 2000,
         });
-      
+        this.calculateTotal();
     }
+    onWeightChange(){
+      console.log(this.weight_value);
+      this.weight_amount = 3 + Math.round(this.weight_value * 0.7);
+      this.calculateTotal();
+    }
+    calculateTotal(){
+      if(this.includeInsurance)
+        this.total = this.distance_value + this.weight_amount + this.insurance;
+      else
+        this.total = this.distance_value + this.weight_amount; 
+    }
+    onInsuranceClick(){
+      this.calculateTotal();
+    }
+    submitRequest(){
     
+      this.snackBar.open("Sending Requests", null, {
+        duration: 2000,
+      });
+     
+      this.loadingService.showLoader();
+      this.delay(2000).then(response =>{
+        this.loadingService.hideLoader();
+        this.router.navigate(["/success"]);
+      });
+      
+     
+    }
+      delay(ms: number) {
+      return new Promise( resolve => setTimeout(resolve, ms) );
+    }
 }
