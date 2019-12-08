@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSlideToggleChange , MatSlideToggle} from '@angular/material';
+import {MatSlideToggleChange , MatSlideToggle, MatDialog} from '@angular/material';
 import { MatSnackBar } from '@angular/material';
 import { LoadingService } from "../loading.service";
 import { Router, ActivatedRoute } from "@angular/router";
+import { SuccessComponent } from '../success/success.component';
 
 @Component({
   selector: 'app-order',
@@ -23,8 +24,12 @@ export class OrderComponent implements OnInit {
   total: any;
   includeInsurance= true;
   constructor( private snackBar: MatSnackBar,
-               private loadingService: LoadingService,private router: Router,
-               ) { }
+               private loadingService: LoadingService,
+               private router: Router,
+               public dialog: MatDialog
+               ) { 
+                 
+               }
 
   ngOnInit() {
     this.distance = localStorage.getItem('distance');
@@ -96,12 +101,27 @@ export class OrderComponent implements OnInit {
       this.loadingService.showLoader();
       this.delay(2000).then(response =>{
         this.loadingService.hideLoader();
-        this.router.navigate(["/success"]);
+        this.openDialog();
       });
       
      
     }
       delay(ms: number) {
       return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+    openDialog(): void {
+      const dialogRef = this.dialog.open(SuccessComponent, {
+        width: '80%',
+        height: '80%',
+        disableClose: true 
+        
+        
+        // data: {name: this.name, animal: this.animal}
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        // this.animal = result;
+      });
     }
 }
