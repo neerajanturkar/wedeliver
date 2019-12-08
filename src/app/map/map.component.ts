@@ -37,7 +37,7 @@ export class MapComponent implements OnInit {
               private loadingService: LoadingService,
               private route: ActivatedRoute,
               private router: Router,
-              private snackBar: MatSnackBar, ) { 
+              private snackBar: MatSnackBar ) { 
     this.bounds = new google.maps.LatLngBounds();
     
   }
@@ -77,7 +77,7 @@ export class MapComponent implements OnInit {
       this.addMarker(this.dest_lat, this.dest_lng,'B',this.marker_b);
       if(this.from!==undefined && this.to!=undefined){
         this.distance =  this.calculateDistance();
-        localStorage.setItem("distance",this.distance);
+        
       }
     }
   );
@@ -115,6 +115,7 @@ export class MapComponent implements OnInit {
       (response, status ) => this.ngZone.run(() => {
         
         this.distance = response.rows[0].elements[0].distance.text;
+        localStorage.setItem("distance",this.distance);
      
     }));
     

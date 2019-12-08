@@ -39,18 +39,18 @@
          <mat-slide-toggle
          style="margin-top: 5.5%;
          margin-left: 23%;"
-         
+         (change)="fragileChanged($event)"
          [checked]="fragile"
          >
-       Yes
+       {{fragile_value}}
      </mat-slide-toggle>
       </div>
       <div class="row">
           <label style="margin-left: 10%;
           margin-top: 5%;
           font-size: 140%;">How valuable it is ? </label>
-          <mat-button-toggle-group name="valuable" aria-label="Font Style">
-              <mat-button-toggle value="high">High</mat-button-toggle>
+           <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedValuable" (change)="onValuableChange(group.value)" >
+              <mat-button-toggle value="high" >High</mat-button-toggle>
               <mat-button-toggle value="medium">Medium</mat-button-toggle>
               <mat-button-toggle value="low">Low</mat-button-toggle>
             </mat-button-toggle-group>
@@ -76,7 +76,7 @@
           <label class="bill-lbl">Distance</label>
           </div>
           <div class="column">
-              <label class="bill-lbl-value" >100</label>
+              <label class="bill-lbl-value" >{{this.distance_value}}</label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
               
           </div>
@@ -90,7 +90,7 @@
           </div>
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
-              <label class="bill-lbl-value">1000</label>
+              <label class="bill-lbl-value">10</label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
           </div>
         </div>
@@ -106,7 +106,7 @@
           </div>
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
-              <label class="strikethrough" [style.text-decoration]="myModel ? '': 'line-through' ">1000</label>
+              <label class="strikethrough" style="float: right;margin-right: 50px" [style.text-decoration]="myModel ? '': 'line-through' ">{{insurance}}</label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
           </div>
           

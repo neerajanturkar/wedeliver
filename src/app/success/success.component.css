@@ -8,7 +8,7 @@ body {
 .wd-image {
   /* The image used */ /* 
   background-image: url("./WeDelivery.jpeg"); */
-  background-image: url("../success/image/WeDelivery1.jpeg");
+  background-image: url("../../assets/image/WeDelivery1.jpeg");
 
   /* Full height */
   height: 100%;

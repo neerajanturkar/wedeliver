@@ -17,14 +17,8 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous"
   />
-  <link
-    href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Solway:500&display=swap");
-  </style>
-  <!-- <link rel="stylesheet" href="login.css" /> -->
+   <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+ 
 
   <title>We Delivery</title>
 </head>
@@ -34,37 +28,44 @@
     <br />50 deliveries in transit….
   </p>
 
-  <h1 class="h1-style">WeDelivery</h1>
+  <h1 class="h1-style" style="padding-top: 6%;">WeDelivery</h1>
 
   <div class="col-lg-4 sign_up_cards">
     <div class="special-card">
-      <div class="card-body text-center">
-        <form class="modal-content1 " action="/action_page.php" method="post">
+      <div class="card-body text-center" style="padding: 2.25rem;">
+        <form class="modal-content1" style="height: 51vh;" >
           <br />
           <h1 class="login_title text-center">Log In</h1>
           <br />
           <div class="form-group">
-            <label for="uname"><b>Username</b></label>
+            <!-- <label for="uname"><b>Email</b></label>
             <input
+            style="width:42%"
               class="placeholder"
               required=""
               type="email"
               name="username"
               placeholder="Email Address"
-            />
+            /> -->
+            <mat-form-field style="width:60%; color:grey;">
+              <input matInput placeholder="Email" type="email">
+            </mat-form-field>
           </div>
           <div class="form-group">
-            <label for="psw"><b>Password</b></label>
+            <!-- <label for="psw"><b>Password</b></label>
             <input
-              class="placeholder"
+              style="width:42%;margin-right:-68px"
               required=""
               type="password"
               name="password"
               placeholder="Password"
-            />
+            /> -->
+            <mat-form-field style="width:60%">
+              <input matInput placeholder="Password" type="password">
+            </mat-form-field>
           </div>
 
-          <button type="submit" class="btn btn-lg  sub-color">
+          <button type="submit" class="sub-color">
             Login
           </button>
           <br />
