@@ -11,10 +11,11 @@ import {
   MatSlideToggleModule,
   MatCheckboxModule,
   MatFormFieldModule,
-  MatSliderModule
+  MatSliderModule,
+  MatSnackBarModule,
+  MatDialogModule
 } from "@angular/material";
 import { AppComponent } from "./app.component";
-
 import { HeaderComponent } from "./header/header.component";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule, routingComponents } from "./app-routing.module";
@@ -27,6 +28,7 @@ import {
 } from "angular-bootstrap-datetimepicker";
 // import {MatCheckboxModule} from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { OrderComponent } from "./order/order.component";
 import { SuccessComponent } from "./success/success.component";
 import { LoginComponent } from "./login/login.component";
 
@@ -37,7 +39,6 @@ import { LoadingService } from "./loading.service";
     AppComponent,
     routingComponents,
     HeaderComponent,
-
     SuccessComponent,
     LoginComponent
   ],
@@ -55,7 +56,9 @@ import { LoadingService } from "./loading.service";
     MatDividerModule,
     MatSliderModule,
     MatButtonToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [MapService, LoadingService],
   bootstrap: [AppComponent]
