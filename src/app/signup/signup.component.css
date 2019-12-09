@@ -1,8 +1,11 @@
 html,
 body {
-  height: 120%;
   margin: 0;
   font-family: "Solway", serif;
+}
+
+.body-img-su {
+  height: 227%;
 }
 
 .wd-image {
@@ -13,16 +16,25 @@ body {
   /* Full height */
   height: 100%;
 
+  /* Blur image */
+  /* Add the blur effect */
+
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.sub-color-signup {
-  /*  background-color: #ec5a52; */
-  background-color: #01579b;
+.h1-style-su {
+  font-family: "Solway", serif, cursive;
+  font-size: 60px;
+  color: #b5423b;
+  margin-top: 3%;
+  margin-left: 38%;
+}
 
+.sub-color-signup {
+  background-color: #ec5a52;
   color: #fff;
   border-radius: 2.25rem;
   padding: 0.5rem 5rem;
@@ -61,16 +73,16 @@ body {
   background-color: #6c757d;
   opacity: 0.9;
   min-width: 44vw;
-  max-width: 95em;
+  max-width: 92em;
   min-height: 64vh;
-  max-height: 95em;
+  max-height: 92em;
 }
 
-.sign_up_cards {
-  margin-top: 8%;
+.sign_up_cards-su {
+  margin-top: 5%;
   margin-right: 20%;
-  margin-bottom: 8%;
-  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-left: 18%;
 }
 
 .para {
@@ -82,18 +94,9 @@ body {
   font-size: 20px;
 }
 
-.h1-style {
-  font-family: "Solway", serif, cursive;
-  font-size: 60px;
-  color: #b5423b;
-  margin-top: 3%;
-  margin-left: 65%;
-}
-
 .text {
   font-family: "Solway", serif;
-  /*  color: #551028; */
-  color: #01579b;
+  color: #551028;
 
   font-size: 36px;
 }
@@ -111,8 +114,6 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 2;
-  margin-top: -41px;
-  margin-bottom: -41px;
 }
 .link-color {
   color: #003bff;
@@ -128,18 +129,13 @@ body {
 }
 .p1 {
   text-align: center;
-  font-size: 52px;
+  font-size: 30px;
 }
 
 .profile-pic {
   max-width: 200px;
   max-height: 200px;
   display: block;
-}
-
-.profile-name {
-  position: relative;
-  bottom: -13px;
 }
 
 .file-upload {
@@ -150,11 +146,9 @@ body {
   overflow: hidden;
   width: 128px;
   height: 128px;
-  border: 8px solid #01579b;
-  /* border: 8px solid #773149; */
+  border: 8px solid #773149;
   position: relative;
   top: -81px;
-  right: 150px;
 }
 img {
   max-width: 100%;
@@ -164,8 +158,7 @@ img {
   position: relative;
   top: -121px;
   right: -85px;
-  /* color: #551028; */
-  color: #01579b;
+  color: #551028;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .p-image:hover {
@@ -177,26 +170,16 @@ img {
 
 .upload-button:hover {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /*   color: #9c566e; */
-  color: #0288d1;
+  color: #9c566e;
 }
 .row-down {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: 457px;
+  margin-left: 342px;
   margin-top: 98px;
 }
 
 .marg-all {
-  margin-bottom: 23%;
-  margin-right: 23%;
-}
-
-.tab-allign {
-  margin-bottom: 15%;
-  margin-right: -4%;
-  margin-left: -58%;
-  border-spacing: 30px;
-  border-collapse: separate;
+  margin-bottom: -25%;
 }
