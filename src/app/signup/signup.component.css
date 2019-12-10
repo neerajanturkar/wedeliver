@@ -2,35 +2,32 @@ html,
 body {
   margin: 0;
   font-family: "Solway", serif;
-}
 
+  background-position: center;
+  text-align: center;
+}
+/* 
 .body-img-su {
   height: 227%;
-}
+} */
 
-.wd-image {
-  /* The image used */ /* 
-  background-image: url("./WeDelivery.jpeg"); */
+/* .wd-image {
+  height: 100%;
   background-image: url("../../assets/image/WeDelivery1.jpeg");
 
-  /* Full height */
-  height: 100%;
-
-  /* Blur image */
-  /* Add the blur effect */
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .h1-style-su {
   font-family: "Solway", serif, cursive;
   font-size: 60px;
-  color: #b5423b;
+  color: blue;
   margin-top: 3%;
-  margin-left: 38%;
+  /*   margin-left: 38%;
+ */
+  text-align: center;
 }
 
 .sub-color-signup {
@@ -55,27 +52,14 @@ body {
   font-size: 20px;
 }
 
-.special-card {
-  /* create a custom class so you 
-       do not run into specificity issues 
-       against bootstraps styles
-       which tends to work better than using !important 
-       (future you will thank you later)*/
-
-  background-color: #6c757d;
-  opacity: 0.9;
-  min-width: 35vw;
-  max-width: 25em;
-  min-height: 35vh;
-  max-height: 25em;
-}
 .special-card-signup {
   background-color: #6c757d;
   opacity: 0.9;
   min-width: 44vw;
   max-width: 92em;
-  min-height: 64vh;
+  min-height: 52vh;
   max-height: 92em;
+  position: relative;
 }
 
 .sign_up_cards-su {
@@ -85,20 +69,11 @@ body {
   margin-left: 18%;
 }
 
-.para {
-  position: absolute;
-  margin-top: 10%;
-  margin-right: 55%;
-  margin-left: 10%;
-  font-family: "Solway", serif;
-  font-size: 20px;
-}
-
 .text {
   font-family: "Solway", serif;
   color: #551028;
 
-  font-size: 36px;
+  font-size: 15px;
 }
 
 .modal-content1 {
@@ -114,72 +89,4 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 2;
-}
-.link-color {
-  color: #003bff;
-  text-align: center;
-}
-
-.label {
-  font-size: 28px;
-}
-
-.form-group {
-  margin-left: 4%;
-}
-.p1 {
-  text-align: center;
-  font-size: 30px;
-}
-
-.profile-pic {
-  max-width: 200px;
-  max-height: 200px;
-  display: block;
-}
-
-.file-upload {
-  display: none;
-}
-.circle {
-  border-radius: 1000px !important;
-  overflow: hidden;
-  width: 128px;
-  height: 128px;
-  border: 8px solid #773149;
-  position: relative;
-  top: -81px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-.p-image {
-  position: relative;
-  top: -121px;
-  right: -85px;
-  color: #551028;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.p-image:hover {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.upload-button {
-  font-size: 1.2em;
-}
-
-.upload-button:hover {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: #9c566e;
-}
-.row-down {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: 342px;
-  margin-top: 98px;
-}
-
-.marg-all {
-  margin-bottom: -25%;
 }

@@ -1,5 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { MatStepperModule } from "@angular/material/stepper";
+import { MatButtonModule, MatAutocompleteModule } from "@angular/material";
 import { NgModule } from "@angular/core";
+
 import {
   MatToolbarModule,
   MatInputModule,
@@ -21,7 +24,13 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule, routingComponents } from "./app-routing.module";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder
+} from "@angular/forms";
 import { MapService } from "./map.service";
 
 import {
@@ -33,9 +42,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { OrderComponent } from "./order/order.component";
 import { SuccessComponent } from "./success/success.component";
 import { LoginComponent } from "./login/login.component";
+import { SignupComponent } from "./signup/signup.component";
 
 import { LoadingService } from "./loading.service";
-import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +52,14 @@ import { SignupComponent } from './signup/signup.component';
     routingComponents,
     HeaderComponent,
     SuccessComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     MatToolbarModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     MatCheckboxModule,
@@ -62,7 +73,12 @@ import { SignupComponent } from './signup/signup.component';
     MatProgressSpinnerModule,
     MatSnackBarModule,
     MatDialogModule,
+    MatStepperModule,
+    MatInputModule,
+    MatButtonModule,
+    MatAutocompleteModule
     MatMenuModule,MatIconModule
+
   ],
   providers: [MapService, LoadingService],
   bootstrap: [AppComponent]
