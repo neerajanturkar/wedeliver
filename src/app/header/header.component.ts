@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() show_logout: boolean; 
-  constructor() { }
+  @Input() parent: any;
+  constructor( private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
+  }
+  onSettingsClick(){
+    this.router.navigate(['/settings']);
+  }
+  onBackClicked(){
+    this.router.navigate(['/'+this.parent]);
   }
 
 }

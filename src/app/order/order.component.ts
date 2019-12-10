@@ -23,6 +23,7 @@ export class OrderComponent implements OnInit {
   weight_amount: any;
   total: any;
   includeInsurance= true;
+  parent="map";
   constructor( private snackBar: MatSnackBar,
                private loadingService: LoadingService,
                private router: Router,
@@ -39,6 +40,7 @@ export class OrderComponent implements OnInit {
     this.distance_value = Math.round(this.distance_value);
     this.weight_amount = 3;
     this.total = this.distance_value + this.weight_amount;
+    localStorage.setItem('settingsParent','order');
   }
   formatLabel(value: any) {
     if (value <= 10) {

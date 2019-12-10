@@ -1,7 +1,7 @@
 <div class="custom-loading-container">
     <mat-spinner></mat-spinner>
   </div>
-<app-header [show_logout]=true></app-header>
+<app-header [parent]=parent [show_logout]=true></app-header>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
 <style>
@@ -32,10 +32,21 @@
             tickInterval="auto"
             
             >
+            
         </mat-slider>
-       
+     
+        
         
       </div>
+      
+      <div class="row">
+            <label style="margin-left: 45.5%;
+            margin-top: -2%;position: relative;">1</label>
+            <label style="margin-left: 9.2%;
+            margin-top: -2%;position: relative;">5</label>
+             <label style="margin-left: 11.2%;
+             margin-top: -2%;position: relative;">10</label>
+          </div>
       <div class="row">
           <label style="margin-left: 10%;
           margin-top: 5%;

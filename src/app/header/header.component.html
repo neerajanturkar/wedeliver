@@ -9,6 +9,9 @@
               keyboard_backspace
               </i></span>
       </button> -->
+      <button style="background: #01579b;color: azure;border: none;margin-top: 7px;" (click)="onBackClicked();">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
         <span class="title-center"><strong>We</strong>Delivery</span>
        
         <button style="background: #01579b;
@@ -18,7 +21,7 @@
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <button mat-menu-item (click)="onSettingsClick();">
               <mat-icon>settings</mat-icon>
               <span>Carrier Settings</span>
             </button>

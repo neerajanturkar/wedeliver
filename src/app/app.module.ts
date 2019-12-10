@@ -37,13 +37,15 @@ import { LoginComponent } from "./login/login.component";
 import { LoadingService } from "./loading.service";
 import { SignupComponent } from './signup/signup.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     HeaderComponent,
     SuccessComponent,
-    LoginComponent
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule,

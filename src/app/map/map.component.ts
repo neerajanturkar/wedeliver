@@ -31,6 +31,7 @@ export class MapComponent implements OnInit {
   source_lng: any;
   dest_lat: any;
   dest_lng: any;
+  parent = "login";
   constructor(private httpClient: HttpClient, 
               private mapService: MapService, 
               private ngZone: NgZone,  
@@ -48,6 +49,7 @@ export class MapComponent implements OnInit {
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+    localStorage.setItem('settingsParent','map');
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
   }
   fromChanged(){
