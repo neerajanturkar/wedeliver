@@ -16,11 +16,11 @@
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
-    <link
+    <!--   <link
       rel="shortcut icon"
       type="image/png"
       href="../../assets/image/food-delivery.png"
-    />
+    /> -->
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
     <script src="./signup.js"></script>
@@ -38,8 +38,74 @@
 
       <div class="col-lg-8 sign_up_cards-su">
         <div class="special-card-signup">
-          <div class="card-body text">
-            <form
+          <div class="card-body text ">
+            <div class="modal-content1">
+              <h1 class="h1-style-su">SignUp</h1>
+              <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <mat-form-field>
+                      <input
+                        matInput
+                        placeholder="First name"
+                        formControlName="firstCtrl"
+                        required
+                      />
+                    </mat-form-field>
+                    <br />
+                    <mat-form-field>
+                      <input
+                        matInput
+                        placeholder="Last name"
+                        formControlName="firstCtrl"
+                        required
+                      />
+                    </mat-form-field>
+                    <div>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel
+                      >Enter Email and Password</ng-template
+                    >
+                    <mat-form-field>
+                      <input
+                        matInput
+                        placeholder="Email Address"
+                        formControlName="secondCtrl"
+                        required
+                      /> </mat-form-field
+                    ><br />
+                    <mat-form-field>
+                      <input
+                        matInput
+                        placeholder="Password"
+                        formControlName="secondCtrl"
+                        required
+                      />
+                    </mat-form-field>
+                    <br />
+                    <mat-form-field>
+                      <input
+                        matInput
+                        placeholder="Repeat Password"
+                        formControlName="secondCtrl"
+                        required
+                      />
+                    </mat-form-field>
+                    <div>
+                      <button mat-button matStepperPrevious>Back</button>
+                      <button mat-button matStepperNext>Submit</button>
+                    </div>
+                  </form>
+                </mat-step>
+              </mat-horizontal-stepper>
+            </div>
+            <!--  <form
               class="modal-content1 "
               action="/action_page.php"
               method="post"
@@ -145,7 +211,7 @@
                 <br />
               </div>
               <br />
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
