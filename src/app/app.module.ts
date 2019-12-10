@@ -16,7 +16,9 @@ import {
   MatFormFieldModule,
   MatSliderModule,
   MatSnackBarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatMenuModule,
+  
 } from "@angular/material";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
@@ -75,6 +77,8 @@ import { LoadingService } from "./loading.service";
     MatInputModule,
     MatButtonModule,
     MatAutocompleteModule
+    MatMenuModule,MatIconModule
+
   ],
   providers: [MapService, LoadingService],
   bootstrap: [AppComponent]

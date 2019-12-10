@@ -7,11 +7,14 @@ import { SuccessComponent } from "./success/success.component";
 import { SignupComponent } from "./signup/signup.component";
 
 const routes: Routes = [
+
   { path: "map", component: MapComponent },
   { path: "order", component: OrderComponent },
   { path: "login", component: LoginComponent },
   { path: "success", component: SuccessComponent },
-  { path: "signup", component: SignupComponent }
+  { path: "signup", component: SignupComponent },
+  { path: '', component: LoginComponent},
+   
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
