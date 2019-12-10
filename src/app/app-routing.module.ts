@@ -8,7 +8,7 @@ import { SuccessComponent } from './success/success.component';
 const routes: Routes = [
     { path: 'map', component: MapComponent },
     { path: 'order', component: OrderComponent },
-    { path: 'login', component: LoginComponent},
+    { path: '', component: LoginComponent},
     { path: 'success', component: SuccessComponent}
 
 ];
