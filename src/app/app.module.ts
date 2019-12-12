@@ -18,6 +18,7 @@ import {
   MatSnackBarModule,
   MatDialogModule,
   MatMenuModule,
+  MatRadioModule
   
 } from "@angular/material";
 import { AppComponent } from "./app.component";
@@ -78,7 +79,8 @@ import { LoadingService } from "./loading.service";
     MatInputModule,
     MatButtonModule,
     MatAutocompleteModule,
-    MatMenuModule,MatIconModule
+    MatMenuModule,MatIconModule,
+    MatRadioModule
 
   ],
   providers: [MapService, LoadingService],

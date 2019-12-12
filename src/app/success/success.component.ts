@@ -8,8 +8,6 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
   styleUrls: ["./success.component.css"]
 })
 export class SuccessComponent implements OnInit {
-  constructor() {}
-
 
   constructor(private router: Router,public dialogRef: MatDialogRef<SuccessComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
