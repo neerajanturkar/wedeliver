@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSlideToggleChange , MatSlideToggle, MatDialog} from '@angular/material';
+import {MatSlideToggleChange, MatDialog} from '@angular/material';
 import { MatSnackBar } from '@angular/material';
 import { LoadingService } from "../loading.service";
 import { Router, ActivatedRoute } from "@angular/router";
@@ -36,11 +36,12 @@ export class OrderComponent implements OnInit {
     this.distance = localStorage.getItem('distance');
     this.distance = this.distance.split(' ',1);
     console.log(this.distance);
-    this.distance_value = 1.5 * this.distance[0];
+    this.distance_value = 0.5 * this.distance[0];
     this.distance_value = Math.round(this.distance_value);
-    this.weight_amount = 3;
+    this.weight_amount = 0;
     this.total = this.distance_value + this.weight_amount;
     localStorage.setItem('settingsParent','order');
+    this.weight_value = 1;
   }
   formatLabel(value: any) {
     if (value <= 10) {
@@ -82,7 +83,7 @@ export class OrderComponent implements OnInit {
     }
     onWeightChange(){
       console.log(this.weight_value);
-      this.weight_amount = 3 + Math.round(this.weight_value * 0.7);
+      this.weight_amount =  Math.round(this.weight_value * 0.7);
       this.calculateTotal();
     }
     calculateTotal(){
@@ -116,14 +117,10 @@ export class OrderComponent implements OnInit {
         width: '80%',
         height: '80%',
         disableClose: true 
-        
-        
-        // data: {name: this.name, animal: this.animal}
       });
   
       dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
-        // this.animal = result;
+  
       });
     }
 }

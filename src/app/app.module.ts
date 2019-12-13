@@ -18,7 +18,7 @@ import {
   MatSnackBarModule,
   MatDialogModule,
   MatMenuModule,
-  MatRadioModule
+  MatRadioModule,MatTooltipModule
   
 } from "@angular/material";
 import { AppComponent } from "./app.component";
@@ -46,7 +46,7 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 
 import { LoadingService } from "./loading.service";
-
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +55,8 @@ import { LoadingService } from "./loading.service";
     HeaderComponent,
     SuccessComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +81,8 @@ import { LoadingService } from "./loading.service";
     MatButtonModule,
     MatAutocompleteModule,
     MatMenuModule,MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTooltipModule
 
   ],
   providers: [MapService, LoadingService],

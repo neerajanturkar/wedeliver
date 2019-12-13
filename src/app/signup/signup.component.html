@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<div class="custom-loading-container">
+    <mat-spinner></mat-spinner>
+  </div>
   <head>
     <title>WeDelivery</title>
     <link
@@ -16,11 +17,8 @@
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
-    <!--   <link
-      rel="shortcut icon"
-      type="image/png"
-      href="../../assets/image/food-delivery.png"
-    /> -->
+   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
     <script src="./signup.js"></script>
@@ -41,10 +39,10 @@
           <div class="card-body text ">
             <div class="modal-content1">
               <h1 class="h1-style-su" style="font-size: 40px;margin-bottom: 25px;">Register</h1>
-              <mat-horizontal-stepper [linear]="isLinear" #stepper>
+              <mat-horizontal-stepper [linear]="true" #stepper>
                 <mat-step [stepControl]="firstFormGroup">
                   <form [formGroup]="firstFormGroup">
-                    <ng-template matStepLabel>How are you called?</ng-template>
+                    <ng-template matStepLabel>Tell us your name</ng-template>
                     <br/>
                     <mat-form-field>
                       <input
@@ -52,6 +50,7 @@
                         placeholder="First name"
                         formControlName="firstCtrl"
                         required
+                        [(ngModel)]="firstName"
                       />
                     </mat-form-field>
                     <br />
@@ -61,6 +60,7 @@
                         placeholder="Last name"
                         formControlName="firstCtrl"
                         required
+                        [(ngModel)]="lastName"
                       />
                     </mat-form-field>
                    
@@ -84,6 +84,7 @@
                         placeholder="Email Address"
                         formControlName="secondCtrl"
                         required
+                        [(ngModel)]="email"
                       /> </mat-form-field
                     ><br />
                     <mat-form-field>
@@ -92,6 +93,8 @@
                         placeholder="Password"
                         formControlName="secondCtrl"
                         required
+                        type="password"
+                        [(ngModel)]="password"
                       />
                     </mat-form-field>
                     <br />
@@ -101,12 +104,14 @@
                         placeholder="Repeat Password"
                         formControlName="secondCtrl"
                         required
+                        type="password"
                         style="margin-bottom: 5px;"
+                        [(ngModel)]="rePassword"
                       />
                     </mat-form-field>
                     <div>
                       <button mat-button matStepperPrevious class="success-btn">Back</button>
-                      <button mat-button matStepperNext class="success-btn">Next</button>
+                      <button mat-button matStepperNext class="success-btn" (click)="validatePassword();">Next</button>
                     </div>
                   </form>
                 </mat-step>
@@ -133,122 +138,15 @@
                      
                       <div>
                         <button mat-button matStepperPrevious class="success-btn">Back</button>
-                        <button mat-button matStepperNext class="success-btn">Submit</button>
+                        <button mat-button matStepperNext class="success-btn" (click)="submitClick();">Submit</button>
                       </div>
                     </form>
                   </mat-step>
               </mat-horizontal-stepper>
             </div>
-            <!--  <form
-              class="modal-content1 "
-              action="/action_page.php"
-              method="post"
-            >
-              <br />
-              <h1 class="login_title text-center">Register</h1>
-              <p class="p1">Please fill in this form to create an account.</p>
-              <hr />
-
-              <div class="row-down">
-                <div class="marg-all">
-                  <div class="circle">
-                    <img
-                      class="profile-pic"
-                      src="../../assets/image/WeDelivery1.jpeg"
-                    />
-                  </div>
-                  <div class="p-image">
-                    <i class="fa fa-camera upload-button"></i>
-                    <input class="file-upload" type="file" accept="image/*" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="label" for="InputFname">First Name</label>
-                <input
-                  type="name"
-                  class="placeholder"
-                  id="InputFname"
-                  placeholder="Enter First Name"
-                />
-              </div>
-              <div class="form-group">
-                <label class="label" for="InputLname">Last Name</label>
-                <input
-                  type="name"
-                  class="placeholder"
-                  id="InputLname"
-                  placeholder="Enter Last Name"
-                />
-              </div>
-              <div class="form-group">
-                <label class="label" for="InputAddress">Address</label>
-                <input
-                  type="address"
-                  class="placeholder"
-                  id="InputAddress"
-                  placeholder="Enter House Number and Streetname"
-                />
-                <p></p>
-                <input
-                  type="address"
-                  class="placeholder"
-                  id="InputAddress"
-                  placeholder="Enter City"
-                />
-                <p></p>
-                <input
-                  type="address"
-                  class="placeholder"
-                  id="InputAddress"
-                  placeholder="Enter Pin Code"
-                />
-              </div>
-              <div class="form-group">
-                <label class="label" for="InputEmail1">Email address</label>
-                <input
-                  type="email"
-                  class="placeholder"
-                  id="InputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div class="form-group">
-                <label class="label" for="InputPassword">Password</label>
-                <input
-                  type="password"
-                  class="placeholder"
-                  id="InputPassword"
-                  placeholder="Password"
-                />
-              </div>
-              <div class="form-group">
-                <label class="label" for="InputRepeatPassword"
-                  >Repeat Password</label
-                >
-                <input
-                  type="password"
-                  class="placeholder"
-                  id="InputRepeatPassword"
-                  placeholder="Repeat Password"
-                />
-              </div>
-              <div class="p1">
-                <p class="p1">Would you like to become a carrier?</p>
-                <input type="radio" value="Yes" /> Yes
-                <input type="radio" value="No" /> No <br />
-                <button type="submit" class="btn   sub-color-signup btn-lg ">
-                  Submit
-                </button>
-                <br />
-              </div>
-              <br />
-            </form> -->
+           
           </div>
         </div>
       </div>
     </div>
   </body>
-</html>

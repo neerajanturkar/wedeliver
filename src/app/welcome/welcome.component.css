@@ -1,0 +1,210 @@
+html,
+body {
+  height: 120%;
+  margin: 0;
+  font-family: "Solway", serif;
+}
+
+.wd-image {
+  /* The image used */ /* 
+  background-image: url("./WeDelivery.jpeg"); */
+  background-image: url("../../assets/image/WeDelivery1.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sub-color-signup {
+  /*  background-color: #ec5a52; */
+  background-color: #01579b;
+
+  color: #fff;
+  border-radius: 2.25rem;
+  padding: 0.5rem 5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.btn-lg {
+  padding: 0.5rem 5rem;
+}
+.placeholder {
+  border-radius: 2.25rem;
+  width: 95%;
+  text-align: center;
+  border-color: slategrey;
+  font-size: 20px;
+}
+
+.special-card {
+  /* create a custom class so you 
+       do not run into specificity issues 
+       against bootstraps styles
+       which tends to work better than using !important 
+       (future you will thank you later)*/
+
+  background-color: #6c757d;
+  opacity: 0.9;
+  min-width: 35vw;
+  max-width: 25em;
+  min-height: 35vh;
+  max-height: 25em;
+}
+.special-card-signup {
+  background-color: #6c757d;
+  opacity: 0.9;
+  min-width: 44vw;
+  max-width: 95em;
+  min-height: 64vh;
+  max-height: 95em;
+}
+
+.sign_up_cards {
+  margin-top: 8%;
+  margin-right: 20%;
+  margin-bottom: 8%;
+  margin-left: 5%;
+}
+
+.para {
+  position: absolute;
+  margin-top: 10%;
+  margin-right: 55%;
+  margin-left: 10%;
+  font-family: 'Hind', sans-serif;
+  font-size: 20px;
+}
+
+.h1-style {
+  font-family: 'Hind', sans-serif;
+  font-size: 60px;
+  color: #b5423b;
+  margin-top: 3%;
+  margin-left: 65%;
+}
+
+.text {
+  font-family: 'Hind', sans-serif;
+  /*  color: #551028; */
+  color: #01579b;
+
+  font-size: 36px;
+}
+
+.modal-content1 {
+  /* position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column; */
+  flex-direction: column;
+  /* width: 100%; */
+  /* pointer-events: auto; */
+  background-color: #fff;
+  /* background-clip: padding-box; */
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 2;
+  margin-top: -41px;
+  margin-bottom: -41px;
+}
+.link-color {
+  color: #003bff;
+  text-align: center;
+}
+
+.label {
+  font-size: 28px;
+}
+
+.form-group {
+  margin-left: 4%;
+}
+.p1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Hind', sans-serif;
+}
+
+.profile-pic {
+  max-width: 200px;
+  max-height: 200px;
+  display: block;
+}
+
+.profile-name {
+  position: relative;
+  bottom: -13px;
+}
+
+.file-upload {
+  display: none;
+}
+.circle {
+  border-radius: 1000px !important;
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  border: 8px solid #01579b;
+  /* border: 8px solid #773149; */
+  position: relative;
+  top: -81px;
+  right: 150px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.p-image {
+  position: relative;
+  top: -121px;
+  right: -85px;
+  /* color: #551028; */
+  color: #01579b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.p-image:hover {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /*   color: #9c566e; */
+  color: #0288d1;
+}
+.row-down {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 457px;
+  margin-top: 98px;
+}
+
+.marg-all {
+  margin-bottom: 23%;
+  margin-right: 23%;
+}
+
+.tab-allign {
+  margin-top: -10%;
+  margin-right: -4%;
+  margin-left: -27%;
+  border-spacing: 30px;
+  border-collapse: separate;
+}
+.success-btn{
+  width: 100%;
+  height: 50px;
+  background: #01579b;
+  color:azure;
+  font-family: 'Hind', sans-serif;
+}

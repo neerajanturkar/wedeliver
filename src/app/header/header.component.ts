@@ -20,5 +20,9 @@ export class HeaderComponent implements OnInit {
   onBackClicked(){
     this.router.navigate(['/'+this.parent]);
   }
+  logout(){
+    this.router.navigate(["/login"]);
+   
+  }
 
 }

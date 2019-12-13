@@ -10,39 +10,44 @@
 <mat-slide-toggle
 style="margin-top: 5.5%;
 margin-left: 23%;"
-(change)="fragileChanged($event)"
-[checked]="fragile"
+(change)="carrierChanged($event)"
+[checked]="carrier"
 >
-On
+{{carrier_value}}
 </mat-slide-toggle>
-<button style="margin-left: 30%;
-border: none;
-background: #01579b;
-color: azure;
-width: 4%;
-font-family: 'Hind';
-">Save</button>
+<button class="button-save" (click)="onSettingsSave();">Save</button>
 <br/>
 <br/>
 <br/>
+<div>
 <label style=" font-size: 20px;margin-left: 10%;font-family: 'Hind', sans-serif;">Daily Commutes</label>
 <br>
-<button style="margin-left: 10%;margin-top: 2%;border: none;margin-right: 2%;">
-<i class="material-icons">
-    add
-    </i>
-    </button>
-    <mat-form-field style="width:17%; color:grey; margin-right: 2%;">
-        <input matInput placeholder="From" type="text">
-      </mat-form-field>
-      <mat-form-field style="width:17%; color:grey; margin-right: 2%;">
-          <input matInput placeholder="To" type="text">
-      </mat-form-field>
-      <mat-form-field style="margin-right: 2%;">
-          <input matInput type="datetime-local" placeholder="Start Date Time" [(ngModel)]="drop_datetime" class="datepicker">
-      </mat-form-field>
-      <mat-form-field>
-          <input matInput type="datetime-local" placeholder="Return Date Time" [(ngModel)]="drop_datetime" class="datepicker">
-      </mat-form-field>
 
 <br>
+<div class="column1">
+    <button style="margin-left: 10%;margin-top: 30%;border: none;margin-right: 2%;" (click)="onCommuteAddClick();">
+            <i class="material-icons">add</i>
+    </button>                                 
+</div>
+<div class="column2">
+<div class="row">
+        
+    <div class="commute-row" *ngFor="let commute of commutes">
+         
+        <mat-form-field style="width:20%; color:grey; margin-right: 2%;">
+            <input matInput placeholder="From" type="text">
+        </mat-form-field>
+        <mat-form-field style="width:20%; color:grey; margin-right: 2%;">
+            <input matInput placeholder="To" type="text">
+        </mat-form-field>
+        <mat-form-field style="margin-right: 2%;width:20%;">
+            <input matInput type="datetime-local" placeholder="Start Date Time" [(ngModel)]="drop_datetime" class="datepicker">
+        </mat-form-field>
+        <mat-form-field style="width:20%;">
+            <input matInput type="datetime-local" placeholder="Return Date Time" [(ngModel)]="drop_datetime" class="datepicker">
+        </mat-form-field>
+    </div>
+   
+    <br>
+</div>
+</div>

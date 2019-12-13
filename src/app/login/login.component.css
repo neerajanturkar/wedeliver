@@ -13,14 +13,8 @@ title{
   margin-left: 7%;
 }
 .wd-image {
-  /* The image used */ /* 
-  background-image: url("./WeDelivery.jpeg"); */
   background-image: url("../../assets/image/WeDelivery.jpeg");
-
-  /* Full height */
   height: 100vh;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,12 +34,7 @@ title{
 }
 
 .special-card {
-  /* create a custom class so you 
-       do not run into specificity issues 
-       against bootstraps styles
-       which tends to work better than using !important 
-       (future you will thank you later)*/
-
+ 
   background-color: #6c757d;
   opacity: 0.9;
   min-width: 35vw;
@@ -66,7 +55,7 @@ title{
   margin-top: 10%;
   margin-right: 55%;
   margin-left: 10%;
-  font-family: "Solway", serif;
+  font-family: "Courgette", cursive;
   font-size: 20px;
 }
 
@@ -86,15 +75,8 @@ title{
 }
 
 .modal-content1 {
-  /* position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column; */
   flex-direction: column;
-  /* width: 100%; */
-  /* pointer-events: auto; */
   background-color: #fff;
-  /* background-clip: padding-box; */
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 2;
@@ -103,4 +85,38 @@ title{
   color: #003bff;
   text-align: center;
   margin-top:10px;
+}
+.marquee {
+  width: 30%;
+  line-height: 50px;
+  margin-left:20%;
+  background-color:transparent;
+  color: Black;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 150%;
+  margin-top: 90%;
+}
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+ 
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+.column1 {
+  float: left;
+  width: 20%;
+  height: 780px; 
+}
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  height: 700px; 
 }
