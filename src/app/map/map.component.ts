@@ -125,7 +125,8 @@ export class MapComponent implements OnInit {
   
 }
   submitRequest(){
-    
+    localStorage.setItem("pickup",this.pickup_datetime);
+    localStorage.setItem("drop",this.drop_datetime);
     this.snackBar.open("Looking for carriers", null, {
       duration: 2000,
     });
