@@ -11,18 +11,18 @@
   }
   .column1 {
     float: left;
-    width: 60%;
+    width: 65%;
     height: 780px; 
   }
   .column2 {
     float: left;
-    width: 30%;
+    width: 25%;
     padding: 20px;
     height: 700px; 
   }
   .label-blue {
       color:  #01579b;
-      font-size: 170%;
+      font-size: 150%;
       padding-left: 10px;
       font-family: 'Hind', sans-serif;
       margin-bottom: -0.5rem;
@@ -33,10 +33,10 @@
     font-family: 'Hind', sans-serif;
 }
   .address-input {
-      width: 500px;
+      width: 120%;
       margin-top: 30px;
       margin-bottom: 30px;
-      height: 40px;
+      height: 7%;
       font-size: 100%;
       margin-left: 10px;
   }
