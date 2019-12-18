@@ -14,3 +14,11 @@ The idea is to eliminate the need of central carrier company.
 Any one can become a carrier, pickup and drop parcels on commutes.
 
 ## Technologies Used
+
+Technology     Purpose
+Angular        Web Development Framework
+Material       Component Library
+Google Maps    Maps & Distance calculation
+Google Fonts   Fonts
+Adobe XD       Mockup, Wireframe
+GitHub         Source Control Repository
