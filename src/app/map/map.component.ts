@@ -144,7 +144,7 @@ export class MapComponent implements OnInit {
   }
 
   validate(){
-    return true;
+    
     if(this.from===undefined){
       this.snackBar.open("Missing pickup location", null, {
         duration: 2000,
