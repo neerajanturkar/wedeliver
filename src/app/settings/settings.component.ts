@@ -26,7 +26,7 @@ export class SettingsComponent implements OnInit {
     
    }
   parent: any;
-  ngOnInit() {
+  ngOnInit() {   
     this.parent = localStorage.getItem('settingsParent');
    
   }

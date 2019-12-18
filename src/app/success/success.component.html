@@ -40,19 +40,19 @@
           <div>
             <br />
             <div>
-              <p class="p1">Yaay! your request was accepted by</p>
+              <p class="p1" aria-label="success-btn">Yaay! your request was accepted by</p>
               <hr />
 
               <div class="row-down">
                 <div class="marg-all">
-                  <h1 class="profile-name">Paul Brownie</h1>
-                  <div class="circle">
-                    <!-- User Profile Image -->
+                  <h1 class="profile-name" aria-label="name of carrier">Paul Brownie</h1>
+                  <!-- <div class="circle">
+                   
                     <img
                       class="profile-pic"
                       src="../../assets/image/WeDelivery1.jpeg"
                     />
-                  </div>
+                  </div> -->
                   <table class="tab-allign">
                     <tr>
                       <td>Expected Pickup</td>
@@ -63,8 +63,8 @@
                       <td>{{drop_datetime}}</td>
                     </tr>
                     <tr>
-                      <td><button class="success-btn"  (click)="newOrder();">New Order</button></td>
-                      <td><button class="success-btn"  (click)="logout();">Log Out</button></td>
+                      <td><button class="success-btn"  (click)="newOrder();" aria-label="new order">New Order</button></td>
+                      <td><button class="success-btn"  (click)="logout();" aria-label="logout">Log Out</button></td>
                     </tr>
                   </table>
                 </div>

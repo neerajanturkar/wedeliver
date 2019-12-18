@@ -6,26 +6,23 @@
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet"/>
 </head>
 <h1>Carrier Settings</h1>
-<label style=" font-size: 20px;margin-left: 10%;font-family: 'Hind', sans-serif;">Carrier Mode</label>
-<mat-slide-toggle
-style="margin-top: 5.5%;
-margin-left: 23%;"
-(change)="carrierChanged($event)"
-[checked]="carrier"
->
+<label style=" font-size: 20px;margin-left: 10%;font-family: 'Hind', sans-serif;" aria-label="carrier mode">Carrier Mode</label>
+<mat-slide-toggle style="margin-top: 5.5%; margin-left: 23%;"
+                    (change)="carrierChanged($event)"
+                    [checked]="carrier" >
 {{carrier_value}}
 </mat-slide-toggle>
-<button class="button-save" (click)="onSettingsSave();">Save</button>
+<button class="button-save" (click)="onSettingsSave();" aria-label="Save">Save</button>
 <br/>
 <br/>
 <br/>
 <div>
-<label style=" font-size: 20px;margin-left: 10%;font-family: 'Hind', sans-serif;">Daily Commutes</label>
+<label style=" font-size: 20px;margin-left: 10%;font-family: 'Hind', sans-serif;" aria-label="daily commutes">Daily Commutes</label>
 <br>
 
 <br>
 <div class="column1">
-    <button style="margin-left: 10%;margin-top: 30%;border: none;margin-right: 2%;" (click)="onCommuteAddClick();">
+    <button style="margin-left: 10%;margin-top: 30%;border: none;margin-right: 2%;" (click)="onCommuteAddClick();" aria-label="add commute">
             <i class="material-icons">add</i>
     </button>                                 
 </div>
@@ -35,16 +32,16 @@ margin-left: 23%;"
     <div class="commute-row" *ngFor="let commute of commutes">
          
         <mat-form-field style="width:20%; color:grey; margin-right: 2%;">
-            <input matInput placeholder="From" type="text">
+            <input matInput placeholder="From" type="text" aria-label="input source">
         </mat-form-field>
-        <mat-form-field style="width:20%; color:grey; margin-right: 2%;">
+        <mat-form-field style="width:20%; color:grey; margin-right: 2%;" aria-label="input destination">
             <input matInput placeholder="To" type="text">
         </mat-form-field>
         <mat-form-field style="margin-right: 2%;width:20%;">
-            <input matInput type="datetime-local" placeholder="Start Date Time" [(ngModel)]="drop_datetime" class="datepicker">
+            <input matInput type="datetime-local" placeholder="Start Date Time" [(ngModel)]="drop_datetime" class="datepicker" aria-label="input start datetime">
         </mat-form-field>
         <mat-form-field style="width:20%;">
-            <input matInput type="datetime-local" placeholder="Return Date Time" [(ngModel)]="drop_datetime" class="datepicker">
+            <input matInput type="datetime-local" placeholder="Return Date Time" [(ngModel)]="drop_datetime" class="datepicker" aria-label="input return datetime">
         </mat-form-field>
     </div>
    

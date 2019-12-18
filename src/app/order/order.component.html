@@ -12,16 +12,12 @@
    
     <div class="row">
       <div class="column1">
-      <h1 style="margin-left:25px;">We would like to know more about your package.</h1>
-      <div class="row">
+      <h1 style="margin-left:25px;" aria-label="give details pf your package">We would like to know more about your package.</h1>
+      <div class="row" style="margin-top: 3%;">
         
-          <label style="margin-left: 10%;
-          margin-top: 5%;
-          font-size: 140%;">Weight of your package ? </label>
+          <label style="margin-left: 10%;margin-top: 5%;font-size: 140%;" aria-label="weight of your package">Weight of your package ? </label>
             <mat-slider
-            style="    margin-top: 4.5%;
-            width: 25%;
-            margin-left: 10%;"
+            style="margin-top: 4.5%;width: 25%;margin-left: 10%;"
             (change)="onWeightChange();"
             [displayWith]="formatLabel"
             [(ngModel)]="weight_value"
@@ -30,65 +26,57 @@
             step="1"
             thumbLabel="true"
             tickInterval="auto"
-            
-            >
-            
-        </mat-slider>
-     
-        
-        
+            aria-label="weight slider"></mat-slider>
       </div>
       
-      <div class="row">
+      <div class="row" style="margin-top: 3%;">
             <label style="margin-left: 45.5%;
-            margin-top: -2%;position: relative;">1</label>
+            margin-top: -5%;position: relative;">1</label>
             <label style="margin-left: 9.2%;
-            margin-top: -2%;position: relative;">5</label>
+            margin-top: -5%;position: relative;">5</label>
              <label style="margin-left: 11.2%;
-             margin-top: -2%;position: relative;">10</label>
+             margin-top: -5%;position: relative;">10</label>
           </div>
-      <div class="row">
+      <div class="row" style="margin-top: 3%;">
           <label style="margin-left: 10%;
-          margin-top: 5%;
-          font-size: 140%;">Is it Fragile ? </label>
+          margin-top: 5%;font-size: 140%;" aria-label="is it fragile">Is it Fragile ? </label>
          <mat-slide-toggle
          style="margin-top: 5.5%;
          margin-left: 23%;"
          (change)="fragileChanged($event)"
          [checked]="fragile"
-         >
+         aria-label="fragile yes/no">
+         
        {{fragile_value}}
      </mat-slide-toggle>
       </div>
-      <div class="row">
-          <label style="margin-left: 10%;
-          margin-top: 5%;
-          font-size: 140%;">How valuable it is ? </label>
+      <div class="row" style="margin-top: 3%;">
+          <label style="margin-left: 10%;margin-top: 5%;font-size: 140%;" aria-label="how valuable is your package">How valuable it is ? </label>
            <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedValuable" (change)="onValuableChange(group.value)" >
-              <mat-button-toggle value="high" >High</mat-button-toggle>
-              <mat-button-toggle value="medium">Medium</mat-button-toggle>
-              <mat-button-toggle value="low">Low</mat-button-toggle>
+              <mat-button-toggle value="high" aria-label="high">High</mat-button-toggle>
+              <mat-button-toggle value="medium" aria-label="medium">Medium</mat-button-toggle>
+              <mat-button-toggle value="low" aria-label="low">Low</mat-button-toggle>
             </mat-button-toggle-group>
        
       </div>
 
-      <div class="row">
+      <div class="row" style="margin-top: 3%;">
           <label style="margin-left: 10%;
           margin-top: 5%;
           font-size: 140%;">Timming Constraint  </label>
            <mat-button-toggle-group name="time" aria-label="Font Style" style="    margin-left: 15%;">
-              <mat-button-toggle value="high">High</mat-button-toggle>
-              <mat-button-toggle value="medium">Medium</mat-button-toggle>
-              <mat-button-toggle value="low">Low</mat-button-toggle>
+              <mat-button-toggle value="high" aria-label="high">High</mat-button-toggle>
+              <mat-button-toggle value="medium" aria-label="medium">Medium</mat-button-toggle>
+              <mat-button-toggle value="low" aria-label="low">Low</mat-button-toggle>
             </mat-button-toggle-group>
        
       </div>
       </div>
       <div class="column2" style="margin-top: 70px;margin-left: 50px;">
-        <h1 style="margin-top:100px;margin-left:127px;margin-bottom: 50px;">Expense</h1>
-        <div class="row">
+        <h1 style="margin-top:100px;margin-left:127px;margin-bottom: 50px;" aria-label="expense">Expense</h1>
+        <div class="row" style="margin-top: 3%;">
             <div class="column" style="margin-left:70px">
-          <label class="bill-lbl">Distance</label>
+          <label class="bill-lbl" aria-label="expense" aria-label="distance">Distance</label>
           </div>
           <div class="column">
               <label class="bill-lbl-value" >{{this.distance_value}}</label>
@@ -103,11 +91,11 @@
         <br>
         <div class="row">
             <div class="column" style="margin-left:70px">
-              <label class="bill-lbl">Weight</label>
+              <label class="bill-lbl" aria-label="weight">Weight</label>
           </div>
           <div class="column">
               <label class="bill-lbl" style="margin-left:5%;">+</label>
-              <label class="bill-lbl-value">{{weight_amount}}</label>
+              <label class="bill-lbl-value" aria-label="weight amount">{{weight_amount}}</label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;" >€</label>
               <mat-icon class="material-icons" style="float: right;margin-top: -36px;margin-right: -5px;color:#01579b" matTooltip="0,7€ / k.g. " matTooltipPosition='after'>
                 info
@@ -121,7 +109,7 @@
         <div class="row">
             <div class="column" style="margin-left:70px">
               <input type="checkbox" (change)="onInsuranceClick();" [(ngModel)]="includeInsurance" style="margin-left: -100px;" class="chk"/>
-              <label class="strikethrough">Insurance</label>
+              <label class="strikethrough" aria-label="optional insurance">Insurance</label>
             <!-- </div> -->
           </div>
           <div class="column">
@@ -137,15 +125,15 @@
         <hr style="width: 285px;margin-right: 100px;">
         <div class="row">
             <div class="column" style="margin-left:70px">
-          <label class="bill-lbl" style="color:#01579b"><strong>Total</strong></label>
+          <label class="bill-lbl" style="color:#01579b" aria-label="total"><strong>Total</strong></label>
           </div>
           <div class="column">
-              <label class="bill-lbl-value" style="color:#01579b"><strong>{{total}}</strong></label>
+              <label class="bill-lbl-value" style="color:#01579b" aria-label="total value"><strong>{{total}}</strong></label>
               <label class="bill-lbl" style="float: right;margin-top: -38px;margin-right: 35px;color:#01579b" >€</label>
               
           </div>
         </div>
-        <button class="proceed-btn" style="margin-top:10px" (click)="submitRequest()">Proceed</button>
+        <button class="proceed-btn" style="margin-top:10px" (click)="submitRequest()" aria-label="proceed">Proceed</button>
       </div>
       </div>
       </body>

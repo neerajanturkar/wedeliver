@@ -16,39 +16,39 @@
             <div class="column2">
               <br>
               <br>
-              <label class="label-blue">From</label>
+              <label class="label-blue" aria-label="form">From</label>
               <br>
-              <input class="address-input" [(ngModel)]="from" (change)="fromChanged();" type="text"/>
+              <input class="address-input" [(ngModel)]="from" (change)="fromChanged();" type="text" aria-label="input from"/>
               <br>
-              <label class="label-blue">To</label>
+              <label class="label-blue" aria-label="to">To</label>
               <br>
-              <input class="address-input" [(ngModel)]="to" (change)="toChanged();" type="text"/>
+              <input class="address-input" [(ngModel)]="to" (change)="toChanged();" type="text" aria-label="input to"/>
               <br>
-              <label *ngIf="distance!=0" class="label-blue">Approximate Distance : </label>
+              <label *ngIf="distance!=0" class="label-blue" aria-label="distance">Approximate Distance : </label>
               
               
-              <label class="distance">{{ distance }}</label>
+              <label class="distance" aria-label="distance">{{ distance }}</label>
               <br>
               <div class="row">
                 <div class="column" style="margin-top:60px">
-                  <label class="label-blue" style="margin-left: 15px;">Pickup By</label>
+                  <label class="label-blue" style="margin-left: 15px;" aria-label="pick up">Pickup By</label>
                  
             
                   <mat-form-field>
-                      <input  matInput type="datetime-local" [(ngModel)]="pickup_datetime" class="datepicker" >
+                      <input  matInput type="datetime-local" [(ngModel)]="pickup_datetime" class="datepicker" aria-label="input pickup datetime">
                     </mat-form-field>
                     <br>
                    
                     <br>
-                    <label class="label-blue" style="padding-left: 24px;margin-right: 5%">Drop By</label>
+                    <label class="label-blue" style="padding-left: 24px;margin-right: 5%" aria-label="drop by">Drop By</label>
                     <mat-form-field>
-                        <input matInput type="datetime-local" [(ngModel)]="drop_datetime" class="datepicker">
+                        <input matInput type="datetime-local" [(ngModel)]="drop_datetime" class="datepicker" aria-label="input drop datetime">
                       </mat-form-field>
                 </div>
                
               </div>
               <br>
-             <button class="proceed-btn" style="margin-top:10px" (click)="submitRequest();">Proceed</button>
+             <button class="proceed-btn" style="margin-top:10px" (click)="submitRequest();" aria-label="proceed">Proceed</button>
             </div>
         
         
